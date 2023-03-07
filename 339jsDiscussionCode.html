@@ -13,7 +13,7 @@
 		}
 	</style>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 	function displayInformation () {
 		// Your code goes here. 
 		// Do not change any other code in this file
@@ -25,22 +25,35 @@
 		let heading = ("Andrew and Esther");
 		document.querySelector("h1").innerHTML = heading;
 
-		document.getElementById("#time").innerHTML = "Tuesday";
+		//document.getElementById("#time").innerHTML = "Tuesday";
 
 
 		// 2. Update the three span elements using ONLY JavaScript
+		document.getElementById("URL").innerHTML = window.location.href;
+		
+		listElements = document.getElementsByTagName("li");
+		console.log (listElements.length);
+		count = listElements.length;
+		document.getElementById("items").innerHTML = count;
 
-
+		let currentDate = new Date();
+		document.getElementById("time").innerHTML = currentDate;
 
 		// 3. Change the background color and margin for the entire page.
+		document.body.style.backgroundColor = "red";
+		document.body.style.margin = "50px 10px 20px 30px";
 	
 
+		 // 4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  
+		// Each occurence should be on a separate line.  Don't use 
+		// paragraphs. 
+		object.oncopy.addEventListener("University of Michigan", copyFunction);
+		function copyFunction() {
+			document.querySelector("div").innerHTML += "</br>" + "Go Blue";
+		}
+		//object.oncopy = copyFunction(){};
 
     }
-
-    // 4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  
-    // Each occurence should be on a separate line.  Don't use 
-    // paragraphs. 
 
 		
 </script>
