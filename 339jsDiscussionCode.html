@@ -42,24 +42,22 @@
 		// 3. Change the background color and margin for the entire page.
 		document.body.style.backgroundColor = "red";
 		document.body.style.margin = "50px 10px 20px 30px";
-	
 
-		 // 4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  
-		// Each occurence should be on a separate line.  Don't use 
-		// paragraphs. 
-		object.oncopy.addEventListener("University of Michigan", copyFunction);
-		function copyFunction() {
-			document.querySelector("div").innerHTML += "</br>" + "Go Blue";
-		}
-		//object.oncopy = copyFunction(){};
 
     }
-
+	 // 4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  
+		// Each occurence should be on a separate line.  Don't use 
+		// paragraphs. 
+		// object.oncopy.addEventListener("copy", copyFunction);
+		function copyFunction() {
+		document.querySelector("#cheer").innerHTML += "</br>" + "Go Blue";
+		}
+		//object.oncopy = copyFunction(){};
 		
 </script>
 
 </head>
-<body>
+<body onload="displayInformation();">
 	<h1>Your name goes here</h1>
 
 	<ol>
